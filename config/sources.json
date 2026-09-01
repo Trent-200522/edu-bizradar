@@ -31,7 +31,7 @@
       "freqHours": 168,
       "keywordGroup": "major",
       "requireBusinessMajor": true,
-      "urls": ["http://jyt.zj.gov.cn/"],
+      "urls": ["http://jyt.zj.gov.cn/", "http://jyt.zj.gov.cn/col/col1229266336/index.html"],
       "selectors": {},
       "enabled": true
     },
@@ -67,7 +67,7 @@
       "freqHours": 168,
       "keywordGroup": "major",
       "requireBusinessMajor": true,
-      "urls": ["http://edu.gd.gov.cn/"],
+      "urls": ["http://edu.gd.gov.cn/", "https://edu.gd.gov.cn/zwgknew/gsgg/index.html"],
       "selectors": {},
       "enabled": true
     },
@@ -79,7 +79,7 @@
       "freqHours": 168,
       "keywordGroup": "major",
       "requireBusinessMajor": true,
-      "urls": ["http://jyt.henan.gov.cn/"],
+      "urls": ["http://jyt.henan.gov.cn/", "http://jyt.henan.gov.cn/xxgk/gggs/", "http://jyt.henan.gov.cn/xxgk/wjtz/"],
       "selectors": {},
       "enabled": true
     },
@@ -91,7 +91,7 @@
       "freqHours": 168,
       "keywordGroup": "major",
       "requireBusinessMajor": true,
-      "urls": ["http://jyt.hubei.gov.cn/"],
+      "urls": ["http://jyt.hubei.gov.cn/", "http://jyt.hubei.gov.cn/zfxxgk/zc_GK2020/qtzdgkwj_GK2020/"],
       "selectors": {},
       "enabled": true
     },
@@ -144,6 +144,17 @@
       "keywordGroup": "hr",
       "requireBusinessMajor": false,
       "_说明": "遍历 config/schools.json 中配置了 hrUrl 的院校",
+      "enabled": true
+    },
+    {
+      "id": "campus-faculty",
+      "level": "P1",
+      "name": "商学院/经管学院师资列表",
+      "adapter": "faculty",
+      "freqHours": 336,
+      "keywordGroup": "procurement",
+      "requireBusinessMajor": false,
+      "_说明": "低频全量+增量：遍历配置了 facultyUrl 的院校，抓取师资名单与公开办公联系方式；仅采集官网公开信息",
       "enabled": true
     },
     {
