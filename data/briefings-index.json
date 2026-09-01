@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-09-01",
+    "type": "weekly",
+    "href": "weekly-2026-09-01.csv"
+  },
+  {
+    "date": "2026-09-01",
+    "type": "daily",
+    "href": "briefing-2026-09-01.html"
+  }
+]
