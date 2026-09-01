@@ -1,0 +1,25 @@
+{
+  "name": "edu-bizradar",
+  "version": "1.0.0",
+  "description": "全国商科院校商机雷达系统：采集→存储→评分→简报→静态站",
+  "main": "src/run.js",
+  "scripts": {
+    "collect": "node src/run.js collect",
+    "score": "node src/run.js score",
+    "briefing": "node src/run.js briefing",
+    "weekly": "node src/run.js weekly",
+    "site": "node src/run.js site",
+    "push": "node push.js"
+  },
+  "keywords": [
+    "edu",
+    "bizradar",
+    "crawler"
+  ],
+  "author": "Trent",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
