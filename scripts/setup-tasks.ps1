@@ -6,13 +6,6 @@ $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $node = (Get-Command node -ErrorAction SilentlyContinue).Source
 if (-not $node) { Write-Error '未找到 node，请先安装 Node.js'; exit 1 }
 
-function Add-Task($name, $scheduleArgs, $nodeArgs) {
-    $tr = "`"$node`" $nodeArgs"
-    $existing = schtasks /Query /TN $name 2>$null
-    if ($existing) { schtasks /Delete /TN $name /F | Out-Null }
-    schtasks /Create /TN $name /SC HOURLY /MO 1 /TR "cmd /c cd /d `"$root`" && $tr" /RL LIMITED /F
-}
-
 # 采集任务：每小时（脚本内部按各源频率决定是否真正执行）
 schtasks /Create /TN "EduBizRadar-Collect" /SC HOURLY /MO 1 /TR "cmd /c cd /d `"$root`" && `"$node`" src/run.js collect && `"$node`" src/run.js score && `"$node`" src/run.js site" /RL LIMITED /F
 
