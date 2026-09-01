@@ -1,5 +1,5 @@
 {
-  "_说明": "目标院校名单。tier：双一流/一本/二本/民办/高职；bidUrl/hrUrl 留空的院校暂不参与对应采集，补充后即可启用；contactEmail 由采集器从官网公开信息回填，禁止手工录入个人手机号",
+  "_说明": "目标院校名单。tier：双一流/一本/二本/民办/高职；bidUrl(招标栏目)/hrUrl(人事处)/facultyUrl(师资页) 留空的院校暂不参与对应采集，补充后即可启用；contactEmail 由采集器从官网公开信息回填，禁止手工录入个人手机号",
   "schools": [
     { "id": "zju", "name": "浙江大学", "province": "浙江", "city": "杭州", "tier": "双一流", "departments": ["管理学院", "经济学院"], "contactEmail": "", "site": "https://www.zju.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "zjut", "name": "浙江工业大学", "province": "浙江", "city": "杭州", "tier": "一本", "departments": ["管理学院", "经济学院"], "contactEmail": "", "site": "https://www.zjut.edu.cn", "bidUrl": "", "hrUrl": "" },
@@ -17,10 +17,10 @@
     { "id": "cuz", "name": "浙大城市学院", "province": "浙江", "city": "杭州", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.cuz.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "zjicm", "name": "浙江传媒学院", "province": "浙江", "city": "杭州", "tier": "二本", "departments": ["管理学院"], "contactEmail": "", "site": "https://www.cuz.zju.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "zjhuzhou", "name": "湖州学院", "province": "浙江", "city": "湖州", "tier": "二本", "departments": ["经济管理学院"], "contactEmail": "", "site": "https://www.huzhouu.edu.cn", "bidUrl": "", "hrUrl": "" },
-    { "id": "usx", "name": "绍兴文理学院", "province": "浙江", "city": "绍兴", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.usx.edu.cn", "bidUrl": "", "hrUrl": "" },
+    { "id": "usx", "name": "绍兴文理学院", "province": "浙江", "city": "绍兴", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.usx.edu.cn", "bidUrl": "https://ztb.usx.edu.cn/", "hrUrl": "", "facultyUrl": "https://rsc.usx.edu.cn/" },
     { "id": "tzc", "name": "台州学院", "province": "浙江", "city": "台州", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.tzc.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "wzut", "name": "温州理工学院", "province": "浙江", "city": "温州", "tier": "二本", "departments": ["经济与管理学院"], "contactEmail": "", "site": "https://www.wzut.edu.cn", "bidUrl": "", "hrUrl": "" },
-    { "id": "zust", "name": "浙江科技大学", "province": "浙江", "city": "杭州", "tier": "一本", "departments": ["经济与管理学院"], "contactEmail": "", "site": "https://www.zust.edu.cn", "bidUrl": "", "hrUrl": "" },
+    { "id": "zust", "name": "浙江科技大学", "province": "浙江", "city": "杭州", "tier": "一本", "departments": ["经济与管理学院"], "contactEmail": "", "site": "https://www.zust.edu.cn", "bidUrl": "https://www.zust.edu.cn/index/ksdh/zbcg.htm", "hrUrl": "", "facultyUrl": "" },
     { "id": "jxu", "name": "嘉兴大学", "province": "浙江", "city": "嘉兴", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.jxu.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "qzu", "name": "衢州学院", "province": "浙江", "city": "衢州", "tier": "二本", "departments": ["经济与管理学院"], "contactEmail": "", "site": "https://www.qzu.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "lsu", "name": "丽水学院", "province": "浙江", "city": "丽水", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.lsu.edu.cn", "bidUrl": "", "hrUrl": "" },
@@ -30,7 +30,7 @@
     { "id": "wzbc", "name": "温州商学院", "province": "浙江", "city": "温州", "tier": "民办", "departments": ["金融贸易学院", "管理学院"], "contactEmail": "", "site": "https://www.wzbc.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "zwu", "name": "浙江万里学院", "province": "浙江", "city": "宁波", "tier": "二本", "departments": ["商学院"], "contactEmail": "", "site": "https://www.zwu.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "hzvtc", "name": "杭州职业技术学院", "province": "浙江", "city": "杭州", "tier": "高职", "departments": ["商贸旅游学院"], "contactEmail": "", "site": "https://www.hzvtc.edu.cn", "bidUrl": "", "hrUrl": "" },
-    { "id": "jhc", "name": "金华职业技术大学", "province": "浙江", "city": "金华", "tier": "高职", "departments": ["商学院"], "contactEmail": "", "site": "https://www.jhc.cn", "bidUrl": "", "hrUrl": "" },
+    { "id": "jhc", "name": "金华职业技术大学", "province": "浙江", "city": "金华", "tier": "高职", "departments": ["商学院"], "contactEmail": "", "site": "https://www.jhc.cn", "bidUrl": "http://zcc.jhc.cn/", "hrUrl": "", "facultyUrl": "" },
     { "id": "zime", "name": "浙江机电职业技术大学", "province": "浙江", "city": "杭州", "tier": "高职", "departments": ["经贸管理学院"], "contactEmail": "", "site": "https://www.zime.edu.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "wzvtc", "name": "温州职业技术学院", "province": "浙江", "city": "温州", "tier": "高职", "departments": ["工商管理学院"], "contactEmail": "", "site": "https://www.wzvtc.cn", "bidUrl": "", "hrUrl": "" },
     { "id": "zjiet", "name": "浙江经贸职业技术学院", "province": "浙江", "city": "杭州", "tier": "高职", "departments": ["财务会计学院", "工商管理系"], "contactEmail": "", "site": "https://www.zjiet.edu.cn", "bidUrl": "", "hrUrl": "" },
