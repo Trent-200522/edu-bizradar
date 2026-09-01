@@ -1,0 +1,165 @@
+{
+  "_说明": "数据源注册表。freqHours 为抓取间隔（168=每周，24=每天，336=每两周）；enabled=false 可暂停某源；选择器留空则走适配器内置通用解析",
+  "global": {
+    "delayMs": 2000,
+    "timeoutMs": 20000,
+    "maxRetry": 2,
+    "respectRobots": true,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36 EduBizRadar/1.0"
+  },
+  "sources": [
+    {
+      "id": "moe-policy",
+      "level": "P0",
+      "name": "教育部-政策文件库",
+      "adapter": "moe",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": false,
+      "urls": [
+        "http://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/",
+        "http://www.moe.gov.cn/s78/A08/"
+      ],
+      "selectors": { "item": "ul.list_list li", "link": "a", "date": "span.date" },
+      "enabled": true
+    },
+    {
+      "id": "prov-zj",
+      "level": "P0",
+      "name": "浙江省教育厅",
+      "adapter": "province",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": true,
+      "urls": ["http://jyt.zj.gov.cn/"],
+      "selectors": {},
+      "enabled": true
+    },
+    {
+      "id": "prov-js",
+      "level": "P0",
+      "name": "江苏省教育厅",
+      "adapter": "province",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": true,
+      "urls": ["http://jyt.jiangsu.gov.cn/"],
+      "selectors": {},
+      "enabled": true
+    },
+    {
+      "id": "prov-sd",
+      "level": "P0",
+      "name": "山东省教育厅",
+      "adapter": "province",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": true,
+      "urls": ["http://edu.shandong.gov.cn/"],
+      "selectors": {},
+      "enabled": true
+    },
+    {
+      "id": "prov-gd",
+      "level": "P0",
+      "name": "广东省教育厅",
+      "adapter": "province",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": true,
+      "urls": ["http://edu.gd.gov.cn/"],
+      "selectors": {},
+      "enabled": true
+    },
+    {
+      "id": "prov-hn",
+      "level": "P0",
+      "name": "河南省教育厅",
+      "adapter": "province",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": true,
+      "urls": ["http://jyt.henan.gov.cn/"],
+      "selectors": {},
+      "enabled": true
+    },
+    {
+      "id": "prov-hb",
+      "level": "P0",
+      "name": "湖北省教育厅",
+      "adapter": "province",
+      "freqHours": 168,
+      "keywordGroup": "major",
+      "requireBusinessMajor": true,
+      "urls": ["http://jyt.hubei.gov.cn/"],
+      "selectors": {},
+      "enabled": true
+    },
+    {
+      "id": "ccgp-bid",
+      "level": "P0",
+      "name": "中国政府采购网-招标检索",
+      "adapter": "ccgp",
+      "freqHours": 24,
+      "keywordGroup": "procurement",
+      "requireBusinessMajor": false,
+      "searchDays": 3,
+      "maxPages": 2,
+      "fallbacks": [
+        { "name": "浙江省政府采购网", "url": "https://zfcg.czt.zj.gov.cn/" },
+        { "name": "中国招标投标公共服务平台", "url": "http://www.cebpubservice.com/" }
+      ],
+      "enabled": true
+    },
+    {
+      "id": "ccgp-competitor",
+      "level": "P2",
+      "name": "中国政府采购网-竞品中标监测",
+      "adapter": "ccgp",
+      "freqHours": 24,
+      "keywordGroup": "competitors",
+      "requireBusinessMajor": false,
+      "searchDays": 3,
+      "maxPages": 1,
+      "signalType": "competitorBid",
+      "enabled": true
+    },
+    {
+      "id": "campus-bid",
+      "level": "P0",
+      "name": "目标院校官网招标栏目",
+      "adapter": "campus-bid",
+      "freqHours": 24,
+      "keywordGroup": "procurement",
+      "requireBusinessMajor": false,
+      "_说明": "遍历 config/schools.json 中配置了 bidUrl 的院校",
+      "enabled": true
+    },
+    {
+      "id": "campus-hr",
+      "level": "P1",
+      "name": "高校人事处招聘（实验系列岗位）",
+      "adapter": "hr",
+      "freqHours": 24,
+      "keywordGroup": "hr",
+      "requireBusinessMajor": false,
+      "_说明": "遍历 config/schools.json 中配置了 hrUrl 的院校",
+      "enabled": true
+    },
+    {
+      "id": "grant-nopss",
+      "level": "P2",
+      "name": "国家社科基金/全国教科规划公示",
+      "adapter": "grant",
+      "freqHours": 168,
+      "keywordGroup": "grant",
+      "requireBusinessMajor": false,
+      "urls": [
+        "http://www.nopss.gov.cn/",
+        "http://onsgep.moe.edu.cn/"
+      ],
+      "selectors": {},
+      "enabled": true
+    }
+  ]
+}
