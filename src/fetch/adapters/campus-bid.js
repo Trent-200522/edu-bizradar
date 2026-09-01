@@ -16,8 +16,8 @@ async function collect(source) {
     saveRaw(source.id, school.bidUrl, html);
     for (const item of extractListItems(html, school.bidUrl, {})) {
       const text = `${item.title} ${item.summary}`;
+      // 目标院校自有招标栏目：全量入库（分类查阅），关键词命中作为信号标记交由评分引擎分层
       const hits = hitKeywords(text, source.keywordGroup);
-      if (hits.length === 0) continue;
       signals.push(
         buildSignal({
           sourceId: source.id,
