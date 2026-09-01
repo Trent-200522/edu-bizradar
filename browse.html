@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分类浏览 - 商科商机雷达</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>全国商科院校商机雷达</h1>
+  <nav>
+    <a href="index.html">商机看板</a>
+    <a href="browse.html">分类浏览</a>
+    <a href="briefings.html">简报存档</a>
+  </nav>
+</header>
+<main>
+<div class="filters">
+  <select id="f-province"><option value="">全部省份</option></select>
+  <select id="f-tier"><option value="">全部层次</option></select>
+  <select id="f-grade"><option value="">全部级别</option></select>
+  <select id="f-signal"><option value="">全部信号类型</option></select>
+  <input id="f-major" type="text" placeholder="按商科专业筛选，如：大数据与财务管理">
+  <span id="f-count"></span>
+</div>
+<div class="tabs">
+  <button data-tab="opp" class="active">商机视图</button>
+  <button data-tab="sig">信号明细</button>
+  <button data-tab="major">专业动态</button>
+</div>
+<div id="pane-opp"><table id="t-opp"></table></div>
+<div id="pane-sig" hidden><table id="t-sig"></table></div>
+<div id="pane-major" hidden><table id="t-major"></table></div></main>
+<footer>仅采集公开发布页面，遵守 robots 协议，不采集个人隐私信息 · 数据每日更新</footer>
+<script src="app.js"></script>
+</body>
+</html>
