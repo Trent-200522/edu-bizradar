@@ -1,0 +1,32 @@
+{
+  "_说明": "评分阈值与话术模板，均可直接改参数生效，无需改代码",
+  "score": {
+    "A": {
+      "budgetMin": 150000,
+      "requireNewMajor": true,
+      "requireNoSoftwareHistory": true,
+      "_说明": "新设专业 + 无历史软件采购记录 + 预算>=15万 -> A类"
+    },
+    "B": {
+      "_说明": "仅师资变动/招聘实验人员信号 -> B类"
+    },
+    "redCard": {
+      "_说明": "目标商科专业停招 -> 红牌，暂不跟进，从简报剔除",
+      "triggerStatus": ["停招", "停止招生"]
+    },
+    "softwareHistoryWindowYears": 3,
+    "_history说明": "判定'有历史软件采购记录'的回看年限（命中竞品/自身中标公告即视为有记录）"
+  },
+  "briefing": {
+    "generateTime": "08:30",
+    "maxItems": 30,
+    "talkTemplates": {
+      "newMajor": "{contact}，看到贵院今年新增{major}专业，我们配套有省级立项的虚拟仿真实验库与跨专业综合实训平台，能否请您{month}月来杭州demo一次？",
+      "bid": "{contact}，关注到贵校“{bidTitle}”项目，我们的商科实训平台与该需求高度匹配，已有同类院校落地案例，距{deadline}截止还有时间，方便安排一次交流吗？",
+      "hr": "{contact}，注意到贵校近期公开招聘实验教学岗位，我们有成熟的经管实验室整体建设方案（软件+课程+师资培训），可提供参考案例，方便发您一份吗？",
+      "grant": "{contact}，看到贵院立项的{title}，我们在该方向有配套的虚拟仿真实验资源与教改合作经验，能否约个时间做一次线上交流？",
+      "competitorBid": "{contact}，关注到贵校近期有同类实训平台采购动态，我们的方案在{advantage}，方便安排一次对比演示吗？"
+    },
+    "defaultContact": "院系负责人"
+  }
+}
