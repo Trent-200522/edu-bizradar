@@ -19,6 +19,7 @@ const ADAPTERS = {
   ccgp: require('./fetch/adapters/ccgp'),
   'campus-bid': require('./fetch/adapters/campus-bid'),
   hr: require('./fetch/adapters/hr'),
+  faculty: require('./fetch/adapters/faculty'),
   grant: require('./fetch/adapters/grant'),
 };
 
