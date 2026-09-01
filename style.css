@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+body{font-family:"Microsoft YaHei",sans-serif;margin:0;background:#f5f7fa;color:#222}
+header{background:#1d3a8a;color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h1{font-size:20px;margin:0}
+nav a{color:#cfe0ff;margin-left:16px;text-decoration:none}
+nav a:hover{text-decoration:underline}
+main{max-width:1200px;margin:20px auto;padding:0 16px}
+footer{text-align:center;color:#888;font-size:12px;padding:24px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.stat{background:#fff;border-radius:8px;padding:14px 20px;box-shadow:0 1px 3px rgba(0,0,0,.08);min-width:130px}
+.stat b{font-size:26px;display:block}
+.stat.a b{color:#d4380d}.stat.w b{color:#d48806}.stat.b b{color:#1664ff}.stat.r b{color:#888}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;margin-bottom:24px}
+.card{background:#fff;border-radius:8px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.08);border-left:4px solid #1664ff}
+.card.A{border-left-color:#d4380d}.card.红牌{border-left-color:#999}
+.card h3{margin:0 0 6px;font-size:16px}
+.card .meta{color:#666;font-size:13px;margin:2px 0}
+.card .talk{background:#f0f5ff;border-radius:6px;padding:8px;font-size:13px;margin-top:8px}
+.card a{color:#1664ff;font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filters select,.filters input{padding:6px 10px;border:1px solid #d9d9d9;border-radius:6px}
+.tabs button{padding:8px 16px;border:1px solid #d9d9d9;background:#fff;cursor:pointer;border-radius:6px 6px 0 0}
+.tabs button.active{background:#1d3a8a;color:#fff;border-color:#1d3a8a}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:13px}
+th,td{border:1px solid #e5e7eb;padding:8px;text-align:left;vertical-align:top}
+th{background:#f0f5ff;position:sticky;top:0}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;color:#fff}
+.badge.A{background:#d4380d}.badge.关注{background:#d48806}.badge.B{background:#1664ff}.badge.红牌{background:#999}
+.brief-list{list-style:none;padding:0}
+.brief-list li{background:#fff;border-radius:8px;padding:10px 14px;margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.brief-list a{color:#1664ff}
+.hint{color:#888;font-size:13px}
